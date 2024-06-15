@@ -121,7 +121,22 @@
             <a href="/event">
                 <p>@lang('public.event')</p>
             </a>
+            <li>
+                <p class="d-inline-flex gap-1">
+                    <a data-bs-toggle="collapse" href="#collapseExampleLang" role="button" aria-expanded="false"
+                        aria-controls="collapseExampleLang">
+                        @lang('public.language') <i class="fa-solid fa-caret-down"></i>
+                    </a>
 
+                </p>
+                <div class="collapse" id="collapseExampleLang">
+                    <ul>
+                        <li><a href="/locale/en">@lang('public.english')</a></li>
+                        <li><a href="/locale/id">@lang('public.indonesian')</a></li>
+             
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -130,35 +145,15 @@
     <div class=" row g-2 px-4">
         <div class="col-lg-13 col-sm-12">
             {{-- <a href="" style="padding-top:10px; padding-bottom:0px;">+6281234543636</a> --}}
-            <a href="https://wa.me/+6281234543636" style="padding-top:10px; padding-bottom:0px;">
-                <i class="fa-solid fa-phone"></i> +6281234543636</a>
-            <a class="line-clamp-1" href="mailto:office@makmurproperty.com"
+            <a href="https://wa.me/+6284375378548" style="padding-top:10px; padding-bottom:0px;">
+                <i class="fa-solid fa-phone"></i> +6284375378548</a>
+            <a class="line-clamp-1" href="mailto:museumkeraton@gmail.com"
                 style="padding-top: 10px; padding-bottom:0px;">
-                <i class="fa-regular fa-envelope"></i> office@makmurproperty.com</a>
+                <i class="fa-regular fa-envelope"></i> museumkeraton@gmail.com</a>
             <a href="https://goo.gl/maps/dKDatFZGXz7B2f8B8" style="padding-top: 10px; padding-bottom:0px;">
-                <i class="fa-solid fa-location-dot"></i> Singosari - Malang </a>
+                <i class="fa-solid fa-location-dot"></i> Sumenep - Madura</a>
         </div>
-        <div class="col-lg-13 col-sm-12">
-            <p class="ps-3" style="margin-bottom: 10px; margin-top:20px; color:white;">Ikuti Kami :</p>
-            <ul class="list-inline-filter" style="padding: 0px;">
-                <li class="list-inline-item">
-                    <a href="https://www.facebook.com/makmurpropertyandrealestate"><i
-                            class="fa-brands fa-facebook fa-lg"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.instagram.com/makmurproperty_/"><i
-                            class="fa-brands fa-instagram fa-lg"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.youtube.com/channel/UCEaZ33eXmunjwxfO3VZQUrQ"><i
-                            class="fa-brands fa-youtube fa-lg"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.tiktok.com/@makmurproperty"><i class="fa-brands fa-tiktok"></i></a>
-                </li>
-            </ul>
-
-        </div>
+        
     </div>
 </div>
 

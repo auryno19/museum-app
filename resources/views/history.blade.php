@@ -22,7 +22,7 @@
     </section>
     <hr style="width: 90%">
     <section>
-        <div class="container p-5 pb-0">
+        <div class="container p-5 pb-0 mb-5">
             <h2>
                 @lang('public.history.title')
             </h2>
@@ -30,25 +30,6 @@
                 @lang('public.history.desc')
             </p>
         </div>
-        <div class="container px-5 pb-5">
-            <div class="row">
-                <div class="col-sm-3">
-                    <img src="{{ 'images/image5.jpg' }}" alt="gambar museum"
-                        style="width: 90%; height: 250px; object-fit:cover; border-radius: 10px">
-                </div>
-                <div class="col-sm-3">
-                    <img src="{{ 'images/image5.jpg' }}" alt="gambar museum"
-                        style="width: 90%; height: 250px; object-fit:cover; border-radius: 10px">
-                </div>
-                <div class="col-sm-3">
-                    <img src="{{ 'images/image5.jpg' }}" alt="gambar museum"
-                        style="width: 90%; height: 250px; object-fit:cover; border-radius: 10px">
-                </div>
-                <div class="col-sm-3">
-                    <img src="{{ 'images/image5.jpg' }}" alt="gambar museum"
-                        style="width: 90%; height: 250px; object-fit:cover; border-radius: 10px">
-                </div>
-            </div>
-        </div>
+     
 
 @endsection
