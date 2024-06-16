@@ -2,7 +2,41 @@
 @section('main')
     <section>
         <div class="jumbotron">
-            <img src="{{ 'images/jumbotron.jpg' }}" alt="" srcset="">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('images/image-collection/kantor_koneng.jpg') }}" class="d-block w-100"
+                            height="500vh" style="object-fit: cover" alt=" gambar rumah koneng">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{ asset('images/image-collection/pendopo.jpg') }}" class="d-block w-100"
+                            height="500vh" style="object-fit: cover" alt=" gambar pendopo">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{ asset('images/image-collection/rumah_panyepen.jpg') }}" class="d-block w-100"
+                            height="500vh" style="object-fit: cover" alt=" gambar rumah panyepen">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{ asset('images/image-collection/labeng_mesem.jpg') }}" class="d-block w-100"
+                            height="500vh" style="object-fit: cover" alt=" gambar labeng mesem">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{ asset('images/image-collection/tamansare5.jpg') }}" class="d-block w-100"
+                            height="500vh" style="object-fit: cover" alt=" gambar taman sare">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </section>
 

@@ -13,7 +13,7 @@ return [
     'service' => 'Layanan',
     'indonesian' => 'Indonesia',
     'time' => 'Jadwal dan Tiket',
-    'tour' => 'Virtual Tour',
+    'tour' => 'Bangunan',
     'english' => 'Inggris',
     'contact' => 'Kontak and Lokasi',
     'contact_us' => 'Hubungi Kami',

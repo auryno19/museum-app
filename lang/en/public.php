@@ -13,7 +13,7 @@ return [
     'service' => 'Service',
     'indonesian' => 'Indonesian',
     'time' => 'Ticket and Shedule',
-    'tour' => 'Virtual Tour',
+    'tour' => 'Building',
     'english' => 'English',
     'contact' => 'Contact and Location',
     'contact_us' => 'Contact Us',
