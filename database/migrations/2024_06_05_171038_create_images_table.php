@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('filepath');
             $table->integer('sequence');
-            $table->unsignedBigInteger('id_collection');
+            $table->unsignedBigInteger('id_collection')->nullable();
             $table->foreign('id_collection')->references('id')->on('collections')->onDelete('cascade');
+            $table->unsignedBigInteger('id_event')->nullable();
+            $table->foreign('id_event')->references('id')->on('events')->onDelete('cascade');
             $table->timestamps();
         });
     }

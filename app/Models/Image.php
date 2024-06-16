@@ -14,10 +14,15 @@ class Image extends Model
         'filepath',
         'sequence',
         'id_collection',
+        'id_event',
     ];
 
     public function Collection()
     {
         return $this->belongsTo(Collection::class, 'id_collection');
+    }
+    public function Event()
+    {
+        return $this->belongsTo(Event::class, 'id_event');
     }
 }
