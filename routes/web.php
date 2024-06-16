@@ -41,10 +41,10 @@ Route::middleware('guest')->group(function () {
 Route::middleware('checkRole')->group(function () {
     Route::resource('/admin/event', EventController::class);
     Route::resource('/admin/collection', CollectionController::class);
-    Route::get('/admin/{id}/editImage', [CollectionController::class, 'editImage']);
-    Route::post('/admin/{id}/addImage', [CollectionController::class, 'addImage']);
-    Route::put('/admin/{id}/updateImage', [CollectionController::class, 'updateImage']);
-    Route::delete('/admin/{id}/deleteImage', [CollectionController::class, 'deleteImage']);
+    Route::get('/admin/event/{id}/editImage', [EventController::class, 'editImage']);
+    Route::post('/admin/event/{id}/addImage', [EventController::class, 'addImage']);
+    Route::put('/admin/event/{id}/updateImage', [EventController::class, 'updateImage']);
+    Route::delete('/admin/event/{id}/deleteImage', [EventController::class, 'deleteImage']);
     Route::get('/admin', [AdminController::class, 'index']);
     Route::get('/logout', [LoginController::class, 'logout']);
     Route::get('/admin/password', [LoginController::class, 'password']);

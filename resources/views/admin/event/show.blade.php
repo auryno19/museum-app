@@ -10,124 +10,147 @@
         {!! implode(
             '',
             $errors->all('    
-                                                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">:message
-                                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                                                    </div>
-                                                                    '),
+                                                                                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">:message
+                                                                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                                                                    </div>
+                                                                                                    '),
         ) !!}
     @endif
-    <div class="p-lg-3">
-        <!-- Modal -->
-        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <form action="/admin/event/{{ $event->id }}" method="post" enctype="multipart/form-data">
-                        @method('put')
-                        @csrf
-                        <div class="modal-header" id="modal-header">
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form action="/admin/event/{{ $event->id }}" method="post" enctype="multipart/form-data">
+                    @method('put')
+                    @csrf
+                    <div class="modal-header" id="modal-header">
 
-                        </div>
-                        <div class="modal-body" id="modal-body">
+                    </div>
+                    <div class="modal-body" id="modal-body">
 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
             </div>
         </div>
-        <h3 class="mt-0 mb-2 font-weight-bold">Agenda</h3>
-
-        <hr />
-        <div class="wrap">
-            <div class="row mb-3">
-                <div class="col-md-5">
+    </div>
+    <div class="p-lg-3">
+        <div class="row text-center">
+            <div class="col-md-6">
+                <h2>
+                    {{ $event->title_id }}
                     <a onclick="myFunction(this.id)" type="button" data-bs-toggle="modal" data-bs-target="#editModal"
-                        id="image">
-                        <img src="{{ asset('images/image-event') }}/{{ $event->image !== null ? $event->image : 'thumb.jpg' }}"
-                            alt="gambar" width="100%" height="380px" style="object-fit: cover;">
+                        id="title_id">
+                        <sup><small>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </small></sup>
                     </a>
-                </div>
-                <div class="col-md-7 mt-2">
-                    <div class="mb-3">
-                        <h3>Judul</h3>
-                        <h4 class="mb-0">{{ $event->title_id }}
-                            <a onclick="myFunction(this.id)" type="button" data-bs-toggle="modal"
-                                data-bs-target="#editModal" id="title_id">
-                                <sup><small>
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </small></sup>
-                            </a>
-                        </h4>
-                    </div>
-                    <div class="mb-3">
-                        <h3>Title</h3>
-                        <h4 class="mb-0">{{ $event->title_eng }}
-                            <a onclick="myFunction(this.id)" type="button" data-bs-toggle="modal"
-                                data-bs-target="#editModal" id="title_eng">
-                                <sup><small>
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </small></sup>
-                            </a>
-                        </h4>
-                    </div>
-                    <div class="mb-3">
-                        <h3>Tanggal Pelaksanaan</h3>
-                        <h4 class="mb-0">{{ \Carbon\Carbon::parse($event->date)->format('d M Y') }}
-                            <a onclick="myFunction(this.id)" type="button" data-bs-toggle="modal"
-                                data-bs-target="#editModal" id="date">
-                                <sup><small>
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </small></sup>
-                            </a>
-                        </h4>
-                    </div>
-
-
-                </div>
+                </h2>
+            </div>
+            <div class="col-md-6">
+                <h2>
+                    {{ $event->title_eng }}
+                    <a onclick="myFunction(this.id)" type="button" data-bs-toggle="modal" data-bs-target="#editModal"
+                        id="title_eng">
+                        <sup><small>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </small></sup>
+                    </a>
+                </h2>
             </div>
 
+        </div>
+        <div class="px-5">
+            <div class="text-center">
+                <a type="button" class="btn btn-sm btn-primary" href="/admin/event/{{ $event->id }}/editImage"> Edit
+                    Gambar</a>
+            </div>
+            @if ($event->Image->count() > 1)
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                        @foreach ($event->Image as $image)
+                            <div class="carousel-item {{ $event->Image->first() == $image ? 'active' : '' }}">
+                                <img src="{{ asset('images/image-event/' . $image->filepath) }}" class="d-block w-100"
+                                    height="500vh" style="object-fit: cover" alt="image {{ $event->title_eng }}">
+                            </div>
+                        @endforeach
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            @else   
+                <div class="px-3">
+                    @if ($event->Image->count())
+                        <img src="{{ asset('images/image-event/' . $event->Image[0]->filepath) }}"
+                            alt="{{ $event->title_eng }}" width="100%" height="400px"
+                            style="object-fit: cover; border-radius: 10px">
+                    @else
+                        <img src="{{ asset('images/default.jpg') }}" alt="{{ $event->title_eng }}" width="100%"
+                            height="400px" style="object-fit: cover; border-radius: 10px">
+                    @endif
+                </div>
+            @endif
+
+        </div>
+        <div class="p-5 mx-5">
             <div class="mb-3">
-                <h3>
-                    Deskripsi Bahasa Indonesia
+                <h2>
+                    Deskripsi Indonesia
                     <a onclick="myFunction(this.id)" type="button" data-bs-toggle="modal" data-bs-target="#editModal"
                         id="desc_id">
                         <sup><small>
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </small></sup>
                     </a>
-                </h3>
-                @foreach (preg_split('/<\?p>/', $event->deskripsi_id) as $paragraph)
-                    @if (!empty($paragraph))
-                        <div class="">
+                </h2>
+                {{-- <p class="fs-5" style="text-align: justify">
+                    {{ $collection->desc_id }}
+                </p> --}}
+                <div>
+                    @foreach (preg_split('/<\?p>/', $event->deskripsi_id) as $paragraph)
+                        @if (!empty($paragraph))
+                            <div class="">
 
-                            <p>{!! $paragraph !!}</p>
-                        </div>
-                    @endif
-                @endforeach
+                                <p>{!! $paragraph !!}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
-
             <div class="mb-3">
-                <h3>
-                    Deskripsi Bahasa Inggris
+                <h2>
+                    Deskripsi Inggris
                     <a onclick="myFunction(this.id)" type="button" data-bs-toggle="modal" data-bs-target="#editModal"
                         id="desc_eng">
                         <sup><small>
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </small></sup>
                     </a>
-                </h3>
-                @foreach (preg_split('/<\?p>/', $event->deskripsi_eng) as $paragraph)
-                    @if (!empty($paragraph))
-                        <div class="">
+                </h2>
+                <div>
+                    @foreach (preg_split('/<\?p>/', $event->deskripsi_eng) as $paragraph)
+                        @if (!empty($paragraph))
+                            <div class="">
 
-                            <p>{!! $paragraph !!}</p>
-                        </div>
-                    @endif
-                @endforeach
+                                <p>{!! $paragraph !!}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
+
     </div>
 
     <script>

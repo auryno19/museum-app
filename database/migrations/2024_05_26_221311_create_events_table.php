@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('date');
             $table->longText('deskripsi_id');
             $table->longText('deskripsi_eng');
-            $table->string('image');
+            // $table->string('image');
             $table->timestamps();
         });
     }

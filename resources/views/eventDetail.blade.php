@@ -10,11 +10,40 @@
 
         </div>
         <div class="p-5 pt-0 mt-5">
-            <div class="px-3">
-                <img src="{{ asset('images/image-event/' . $event->image) }}"
-                    alt="{{ $event->title_eng }}" width="100%" height="400px"
-                    style="object-fit: cover; border-radius: 10px">
-            </div>
+            @if ($event->Image->count() > 1)
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                        @foreach ($event->Image as $image)
+                            <div class="carousel-item {{ $event->Image->first() == $image ? 'active' : '' }}">
+                                <img src="{{ asset('images/image-event/' . $image->filepath) }}" class="d-block w-100"
+                                    height="500vh" style="object-fit: cover" alt="image {{ $event->title_eng }}">
+                            </div>
+                        @endforeach
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            @else
+                <div class="px-3">
+                    @if ($event->Image->count())
+                        <img src="{{ asset('images/image-event/' . $event->Image[0]->filepath) }}"
+                            alt="{{ $event->title_eng }}" width="100%" height="400px"
+                            style="object-fit: cover; border-radius: 10px">
+                    @else
+                        <img src="{{ asset('images/default.jpg') }}" alt="{{ $event->title_eng }}" width="100%"
+                            height="400px" style="object-fit: cover; border-radius: 10px">
+                    @endif
+                </div>
+            @endif
         </div>
         <div>
             <div class="p-5 mx-5">

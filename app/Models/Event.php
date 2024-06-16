@@ -16,7 +16,7 @@ class Event extends Model
         'date',
         'deskripsi_id',
         'deskripsi_eng',
-        'image',
+        // 'image',
     ];
 
     public function Image()

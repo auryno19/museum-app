@@ -12,7 +12,7 @@
                 </span>Events
             </a>
 
-            <a href="/admin/event/create" class="list-group-item list-group-item-action {{ request()->is('admin/asistant/create') ? ' active' : '' }}">
+            <a href="/admin/event/create" class="list-group-item list-group-item-action {{ request()->is('admin/event/create') ? ' active' : '' }}">
                 <span class="mr-2">
                     <i class="fa-solid fa-user-plus"></i>
                 </span>Add Events
