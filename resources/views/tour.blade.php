@@ -52,16 +52,21 @@
                     </h3>
                     <p style="text-align: justify">
                         @if (Session::get('locale') == 'in' || Session::get('locale') == 'id')
-                            Taman Sare merupakan taman dengan kolam kecil yang airnya keluar dari pangkalan. Taman Sare
-                            adalah taman yang sangat menarik pada saat itu. Pasalnya, tempat ini dilengkapi dengan tiga buah
-                            pemandian yang sebelumnya digunakan oleh Ratu dan putri Adipati. Konon katanya setiap pemandian
-                            tersebut memiliki berbagai macam khasiat yang didapat jika membasuh badan atau wajah dengan air
-                            tersebut.
+                        Taman Sare merupakan sumber mata air yang hingga saat ini dipercaya digunakan sebagai tempat mandi para keluarga keraton. Lokasi Taman Sare berada di sisi timur Labang Mesem. Taman Sare dibangun bersamaan dengan Keraton Sumenep sekitar tahun 1762. Taman Sare dikelilingi tembok benteng yang tinggi dan tebal yang berfungsi sebagai pelindung.
+                        <br><br>
+                        Menurut tutur yang berkembang, Taman Sare digunakan sebagai pemandian keluarga keraton, namun hal ini tidak tepat. Taman Sare sebenarnya merupakan tempat sumber mata air yang mengalir ke arah selatan. Faktanya, Taman Sare dibangun karena keraton harus dekat dengan sumber mata air. Dapat disimpulkan bahwa Taman Sare bukanlah tempat pemandian para putri, selir, atau permaisuri sultan, melainkan sebuah sumber mata air.
+                        <br><br>
+                        Di kolam Taman Sare terdapat 3 pintu, setiap pintu dipercaya memiliki keutamaan masing-masing. Pintu pertama memiliki keterangan bahwa melintasinya dipercaya dapat membuat pengunjung terlihat awet muda, serta dimudahkan dalam mendapatkan jodoh dan keturunan. Pintu kedua diyakini dapat meningkatkan karir atau jabatan seseorang. Pintu terakhir atau pintu ketiga diyakini dapat meningkatkan kereligiusan orang yang melintasinya menuju kolam.
+                        <br><br>
+                        Penjelasan tentang Taman Sare ini menjelaskan bahwa sebenarnya Taman Sare bukan tempat pemandian atau tempat mandi, melainkan sebagai sumber mata air yang penting bagi Keraton Sumenep.
                         @else
-                            Taman Sare is a garden with a small pool where water flows from a spring. Taman Sare was a very
-                            attractive garden at the time because it featured three bathing pools used by the queen and the
-                            duke's daughters. Each pool was believed to have various benefits for those who washed their
-                            bodies or faces with its water.
+                        Taman Sare is a spring that has long been believed to be used as a bathing place for the royal family. Located on the eastern side of Labang Mesem, Taman Sare was constructed concurrently with Keraton Sumenep around 1762. It is surrounded by high and thick fortress walls serving as protection. 
+                        <br><br>
+                        Contrary to popular belief, Taman Sare actually is not a bathing place for the royal family but rather a natural spring flowing southward. It was built because the palace needed proximity to a water source. Therefore, Taman Sare should be understood not as a bathing place for princesses, concubines, or the queen but as a spring water source.
+                        <br><br>
+                        Within the pool of Taman Sare are three gates, each believed to possess distinct virtues. The first gate grants visitors eternal youth and facilitates finding a spouse and offspring. The second gate is believed to enhance a career or position. The third gate, known as the last gate, is thought to elevate the religious devotion of those passing through towards the pool. 
+                        <br><br>
+                        The explanation of Taman Sare clarifies that it is not a bathing place but rather a significant water source for Keraton Sumenep.
                         @endif
 
                     </p>
@@ -91,12 +96,9 @@
                     <div class="py-5">
                         <p style="text-align: center" class="fs-5">
                             @if (Session::get('locale') == 'in' || Session::get('locale') == 'id')
-                                Pendopo (tempat pertemuan) merupakan sebuah ruangan di tengah kompleks keraton yang digunakan
-                                untuk pertemuan. Ini adalah bangunan sederhana namun khas yang didekorasi dengan gaya yang
-                                indah.
+                            Pendopo (tempat pertemuan) merupakan sebuah ruangan di tengah kompleks keraton yang digunakan untuk pertemuan. Keraton ini memiliki bangunan sederhana namun khas yang didekorasi dengan gaya yang indah. Saat ini Pendopo digunakan untuk pemerintah dalam menerima tamu kehormatan, serta pelantikan pejabat daerah Sumenep.  Dahulu kala Pendopo ini digunakan sebagai tempat resmi untuk menerima tamu-tamu kerajaan, pelaksanaan upacara adat, tempat pertunjukan seni, serta tempat untuk konsultasi dan pengambilan keputusan strategis terkait dengan pemerintahan dan administrasi kerajaan.
                             @else
-                                The Pendopo is a room in the center of the palace complex used for meetings. It is a simple yet
-                                characteristic building decorated in a beautiful style.
+                            The Pendopo (Meeting Hall) is a central chamber within the palace complex used for official gatherings. It features simple yet distinct architecture adorned with beautiful decorations. Currently, the Pendopo hosts government receptions for dignitaries and local officials' inaugurations. In the past, it served as the official venue for royal receptions, traditional ceremonies, artistic performances, consultations, and strategic decision-making related to governance and administration.
                             @endif
     
                         </p>
@@ -167,7 +169,7 @@
             </div>
             <hr>
             <div class="row my-3 py-4">
-                <div class="col-sm-4">
+                <div class="col-sm-4 my-auto">
                     <img src="{{ asset('images/image-collection/rumah_panyepen.jpg') }}" alt="rumah penyepen" width="100%"
                         height="300vh" style="object-fit: cover; border-radius: 10px">
                 </div>
@@ -186,7 +188,9 @@
                             yang terdapat di lokasi museum ketiga adalah beberapa perangkat kursi, tempat tidur, cermin
                             besar, buffet, gamparan, stempel kerajaan, alat penyaring air, sendok keramik, wayang golek,
                             wayang kulit, fosil (tulang tangan ikan duyung, gigi gajah, kerang, kayu, dan batu), pakaian
-                            Raja dan Putri, sarung, dan sajadah dari kulit macan .
+                            Raja dan Putri, sarung, dan sajadah dari kulit macan.
+                            <br><br>
+                            Dahulu kala Rumah Penyepen ini merupakan keraton lama, yakni keraton peninggalan Tumenggung Tirtonegoro atau Bindara Saod dan Gusti Raden Ayu Rasmana Tirtonegoro (Ratu Tirtonegoro), penguasa Sumenep ke-XXX. Gusti Raden Ayu Rasmana Tirtonegoro (Ratu Tirtonegoro) tak lain adalah orang tua angkat dari Panembahan Somala (Raden Asirudin). Keraton tersebut dibangun menghadap selatan dengan bangunan yang lebih sederhana. Keraton lama disebut juga Ndalem Penyepen, terdiri dari pendopo dan sebuah rumah dengan 4 buah kamar serta loteng, tempat Tumenggung Tirtonegoro (Bindara Saod) menyepi. Bila dari arah pintu masuk, kamar depan sebelah kanan merupakan tempat tidur Tumenggung Tirtonegoro, dan kamar depan sebelah kiri merupakan kamar Gusti Raden Ayu Rasmana Tirtonegoro.
                         @else
                             The Penyepen House, located on the west side of the Sumenep Palace, is currently used as a
                             collection room for the Sumenep Palace Museum, also known as Museum Keraton Sumenep III. The
@@ -194,6 +198,8 @@
                             buffets, gamparan (traditional footwear), royal seals, water filters, ceramic spoons, wooden
                             puppets, leather puppets, fossils (including dugong bones, elephant teeth, shells, wood, and
                             stones), the clothes of the king and princess, sarongs, and tiger skin prayer rugs.
+                            <br><br>
+                            Historically, Rumah Penyepen served as the old palace, the residence of Tumenggung Tirtonegoro or Bindara Saod and Gusti Raden Ayu Rasmana Tirtonegoro (Ratu Tirtonegoro), the rulers of Sumenep in the 30th reign. This palace faced south and consisted of simpler structures. Also known as Ndalem Penyepen, it included a pavilion and a house with four chambers and an attic where Tumenggung Tirtonegoro secluded himself. From the entrance, the right front chamber served as Tumenggung Tirtonegoro's bedroom and the left front chamber was Gusti Raden Ayu Rasmana Tirtonegoro's.
                         @endif
 
                     </p>

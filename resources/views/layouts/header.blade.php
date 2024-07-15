@@ -41,7 +41,7 @@
                 </ul>
             </li>
             <li class="item mx-2"><a href="/collection">@lang('public.collection')</a></li>
-            <li class="item mx-2"><a href="/event">@lang('public.event')</a></li>
+            {{-- <li class="item mx-2"><a href="/event">@lang('public.event')</a></li> --}}
             <li class="item mx-2 nav-item dropdown">
                 <a class="nav-link dropdown-toggle" style="font-weight: 400" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -118,9 +118,9 @@
             <a href="/collection">
                 <p>@lang('public.collection')</p>
             </a>
-            <a href="/event">
+            {{-- <a href="/event">
                 <p>@lang('public.event')</p>
-            </a>
+            </a> --}}
             <li>
                 <p class="d-inline-flex gap-1">
                     <a data-bs-toggle="collapse" href="#collapseExampleLang" role="button" aria-expanded="false"

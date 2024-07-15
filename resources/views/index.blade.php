@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('main')
+{{ dd(Session::get('locale')) }}
     <section>
         <div class="jumbotron">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">

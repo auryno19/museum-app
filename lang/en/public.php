@@ -22,17 +22,25 @@ return [
     'visiting_info' => 'Visiting Service Information',
     'time_op' => 'Operational Time',
     'ticket' => 'Ticket Price',
-    'warning' => 'Ticket payment upon arrival',
+    'warning' => '*Ticket payment upon arrival',
     'student' => 'Student',
     'reguler' => 'Regular',
     'foreigner' => 'Foreigner',
     'monday' => 'Monday',
+    'tuesday' => 'Tuesday',
+    'wednesday' => 'Wednesday',
     'thursday' => 'Thursday',
+    'friday' => 'Friday',
     'saturday' => 'Saturday',
     'sunday' => 'Sunday',
+    'break' => '(Break)',
+    'facilities' => 'Visit Facilities',
+    'facilities_desc' => 'Visit facilities accompanied by a guide, toilets, prayer rooms, resting and relaxing places and free soft drinks for tourism drivers.',
     'definition.desc' => 'A museum is an institution that acquires, stores, preserves, and exhibits important objects or artifacts from various fields such as history, art, and culture for the purpose of education, research, and public entertainment.',
-    'history.header' => 'The Museum Keraton Sumenep, which was established in 1781 with architecture that combines European, Chinese and Javanese styles, is currently the only palace in East Java that has been collecting objects belonging to the king and his descendants since 1965. objects belonging to the king and his descendants since 1965.',
+    'history.header' => 'The history of the Sumenep Palace indicates that it was established during the reign of Pangeran Nata Kusuma I or Panembahan Sumolo in 1762. Designed by the Chinese architect Louw Phia Ngo, it amalgamates Islamic, European, Chinese, and Javanese architectural styles. The Sumenep Palace stands as the only intact royal building in East Java.',
     'history.title' => 'The Beginning of the Palace Museum',
-    'history.desc' => '                The Sumenep Keraton Museum currently occupies the building of the Sumenep Palace which is estimated to have been established in 1781 with the architect a resident of Chinese descent named Lauw Liango who combined European, Chinese and Javanese styles. The Sumenep Palace itself was built on private land owned by Panembahan Somala who was the King of Sumenep (31st King of Sumenep). The Sumenep Palace as the center of government control and as well as the kings residence lasted until 1945. After Indonesia gained independence, the status of the kingdoms in Indonesia including Sumenep did not stand alone but became a single unit of leadership under the flag of the Unitary State of the Republic of Indonesia with the abolition of the royal government system. This condition gradually led to the descendants of the King of Sumenep no longer taking an active part in the government, administratively the palace belonged to the government of the Republic of Indonesia, including the furniture belonging to the palace.<br><br>Based on these conditions, the objects that are currently in the collection of the Sumenep Palace Museum belong to the king and his descendants collected into one since its establishment around 1965 during the reign of the 9th Sumenep Regent, Drs. Abdurahman.<br><br>Currently, the Sumenep Palace is the only palace that still stands in East Java.'
+    'history.desc' => "Currently, the Sumenep Palace is the sole surviving palace in East Java. The Sumenep Palace Museum occupies the historical building erected around 1762 by the Chinese architect Louw Phia Ngo. Initially built on Panembahan Somala's private land, who was the 31st ruler of Sumenep, the palace functioned as the administrative centre and residence of the monarch until 1945. Post-independence, Indonesia integrated its former kingdoms, including Sumenep, into a unified leadership under the Republic of Indonesia, abolishing the royal governance system. 
+<br><br>
+Administratively, the palace and all its artefacts became state property. Thus, the artefacts currently housed in the Sumenep Palace Museum were originally owned by the monarchs and their descendants, collected since the establishment of the Sumenep Palace and consolidated around 1965 during the 9th administration of the Sumenep Regent, Drs. Abdurahman.",
 
 ];
